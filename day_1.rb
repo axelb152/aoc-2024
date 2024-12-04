@@ -1,6 +1,6 @@
 class PartOne
   def initialize
-    @input = File.read('day_1_input.txt').split("\n")
+    @input = File.read('d1_input.txt').split("\n")
 
     @list1 = []
     @list2 = []
