@@ -1,4 +1,5 @@
-class PartOne
+require 'pry'
+class DayOne
   def initialize
     @input = File.read('d1_input.txt').split("\n")
 
@@ -16,7 +17,7 @@ class PartOne
     @list2.sort!
   end
 
-  def run
+  def part_one
     total_distance = 0
     @list1.each_with_index do |item1, index|
       item2 = @list2[index]
@@ -24,6 +25,19 @@ class PartOne
     end
     puts "part one: total distance: #{total_distance}"
   end
+
+  def part_two
+    total_similarity = 0
+    @list1.each do |item1|
+      @list2.each do |item2|
+        if item1 == item2
+          total_similarity += item1 * 1
+        end
+      end
+    end
+    puts "part two: total similarity: #{total_similarity}"
+  end
 end
 
-PartOne.new.run
+DayOne.new.part_one
+DayOne.new.part_two
