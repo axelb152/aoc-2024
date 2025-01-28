@@ -18,7 +18,7 @@
 require 'pry'
 class DayTwo
   def initialize
-    @input = File.read('d2_example_input.txt').split("\n")
+    @input = File.read('d2_input.txt').split("\n")
 
     @safe_reports_count = 0
   end
